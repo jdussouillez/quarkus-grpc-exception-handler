@@ -12,3 +12,5 @@ Simple project (based on Quarkus quickstart project) to reproduce a bug with the
 - Use gRPC client (Postman, grpcurl, etc) and call the `Greeter / SayHello` (on `localhost:8080`) service with message `{"name": "internal"}`
 - The service throws an exception and the `HelloExceptionHandlerProvider` turns it into a `StatusException` with "INTERNAL" gRPC status.
 - On the client, the status is "UNKNOWN" but it should be "INTERNAL" because [`HelloExceptionHandler::handleException`](https://github.com/jdussouillez/quarkus-grpc-exception-handler/blob/master/src/main/java/io/quarkus/grpc/examples/hello/HelloExceptionHandlerProvider.java#L53) is not called.
+
+![Postman response](./assets/response.png)

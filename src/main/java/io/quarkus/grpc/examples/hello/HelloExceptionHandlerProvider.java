@@ -17,8 +17,6 @@ public class HelloExceptionHandlerProvider implements ExceptionHandlerProvider {
     @Override
     public <ReqT, RespT> ExceptionHandler<ReqT, RespT> createHandler(final ServerCall.Listener<ReqT> listener,
         final ServerCall<ReqT, RespT> serverCall, final Metadata metadata) {
-        // It's a bit dirty to pass the injected mapper in the constructor, but we can't let the CDI inject the
-        // exception handler because it's generic (and @Dependent scope doesn't seem to work fine).
         System.out.println("HelloExceptionHandlerProvider::createHandler");
         return new HelloExceptionHandler<>(listener, serverCall, metadata);
     }

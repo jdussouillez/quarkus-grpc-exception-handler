@@ -6,7 +6,7 @@ Simple project (based on Quarkus quickstart project) to reproduce a bug with the
 - https://github.com/quarkusio/quarkus/pull/29419/files
 - https://stackoverflow.com/questions/70832902/serverinterceptor-grpc-not-catching-exceptions-with-smallrye-mutiny-reactive-in/70878529#70878529
 
-## Step to reproduce
+## Steps to reproduce
 
 - Run the server : `./mvnw quarkus:dev`
 - Use gRPC client (Postman, grpcurl, etc) and call the `Greeter / SayHello` (on `localhost:8080`) service with message `{"name": "internal"}`

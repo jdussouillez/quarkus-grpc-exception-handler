@@ -2,7 +2,8 @@
 
 Simple project (based on Quarkus quickstart project) to reproduce a bug with the gRPC exception handler
 
-Original SO post: https://stackoverflow.com/questions/75412735/quarkus-grpc-exceptionhandlerprovider-does-not-close-response-message-with-the-c
+- Original SO post: https://stackoverflow.com/questions/75412735/quarkus-grpc-exceptionhandlerprovider-does-not-close-response-message-with-the-c
+- Quarkus discussion: https://github.com/quarkusio/quarkus/discussions/31110
 
 ## Steps to reproduce
 
